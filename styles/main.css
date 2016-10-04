@@ -503,3 +503,25 @@ select.form-control, input{
 .row.time{
   font-weight: 200;
 }
+
+/*--sitedetail style--*/
+.row.detailbutton{
+  padding: 2em 3em 0 3em;
+}
+
+button#deletesite.btn.btn-danger{
+  float: right;
+}
+
+button#edit.btn.btn-primary{
+  margin-left: 10px;
+}
+
+table.table.detail, td.leftdetail, td.rightdetail{
+  border: none!important;
+}
+
+td.leftdetail{
+  width: 190px;
+  font-weight: 400;
+}
