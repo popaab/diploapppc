@@ -1,47 +1,74 @@
  [
    { 
       "name": "株式会社アーク",
+      "kana": "カブシキカイシャアーク",
       "line": "ア",
-      "staff": "高島"
+      "staff": "高島",
+      "staffkana": "タカシマ",
+      "email": "takashima@ark.co.jp"
    },
    { 
       "name": "株式会社ウィズ",
+      "kana": "カブシキカイシャウィズ",
       "line": "ア",
-      "staff": "田中"
+      "staff": "田中",
+      "staffkana": "タナカ",
+      "email": "tanaka@wes.jp"
    },
    { 
       "name": "株式会社エイス",
+      "kana": "カブシキカイシャエイス",
       "line": "ア",
-      "staff": "藤井"
+      "staff": "藤井",
+      "staffkana": "フジイ",
+      "email": "fujii@ace.co.jp"
    },
    { 
       "name": "株式会社ABC工業",
+      "kana": "カブシキカイシャABCコウギョウ",
       "line": "ア",
-      "staff": "森田"
+      "staff": "森田",
+      "staffkana": "モリタ",
+      "email": "morita@abc.jp"
    },
    { 
       "name": "株式会社サカモト",
+      "kana": "カブシキカイシャサカモト",
       "line": "サ",
-      "staff": "小林"
+      "staff": "小林",
+      "staffkana": "コバヤシ",
+      "email": "kobayashi@sakamotoltd.jp"
    },
    { 
       "name": "鈴木工業",
+      "kana": "スズキコウギョウ",
       "line": "サ",
-      "staff": "鈴木"
+      "staff": "鈴木",
+      "staffkana": "スズキ",
+      "email": "suziki1965@suzuki.co.jp"
    },
    { 
       "name": "株式会社ティムズ",
+      "kana": "カブシキカイシャティムズ",
       "line": "タ",
-      "staff": "竹内"
+      "staff": "竹内",
+      "staffkana": "タケウチ",
+      "email": "takeuchi@timsinc.jp"
    },
    { 
       "name": "株式会社ナカマ",
+      "kana": "カブシキカイシャナカマ",
       "line": "ナ",
-      "staff": "粂"
+      "staff": "粂",
+      "staffkana": "クメ",
+      "email": "kume1@nakama.co.jp"
    },
    { 
       "name": "株式会社ムラサキ",
+      "kana": "カブシキカイシャムラサキ",
       "line": "マ",
-      "staff": "二宮"
+      "staff": "二宮",
+      "staffkana": "ニノミヤ",
+      "email": "ninomiya@murasaki.jp"
    }
 ]

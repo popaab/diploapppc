@@ -1,0 +1,79 @@
+<div id="page" ng-controller="MainCtrl">
+	
+	<div class="row detailbutton" ng-hide="showform">
+      <a href="#/companyoverview">
+        <button class="btn cancel" id="back">
+          <i class="glyphicon glyphicon-arrow-left">　戻る</i>
+        </button>
+      </a>
+      <button class="btn btn-primary" id="edit" ng-click="showform=true">
+        <i class="glyphicon glyphicon-pencil">　編集</i>
+      </button>
+      <button class="btn btn-danger" id="deletesite">
+        <i class="glyphicon glyphicon-trash">　削除</i>
+      </button>
+	</div>
+
+	<div class="row detailbutton" ng-show="showform">
+		<button ng-click="detail=true" class="btn cancel" id="back" onClick="history.go(0)" value="Refresh">
+			<i class="glyphicon glyphicon-remove">　キャンセル</i>
+		</button>
+		<a href="#/company/0">
+			<button ng-click="detail=true" class="btn btn-success" id="save" onClick="history.go(0)" value="Refresh">
+			<i class="glyphicon glyphicon-floppy-disk"></i>　保存
+		</button>
+		</a>
+	</div>
+
+	<div class="addcompany" ng-hide="showform">
+		<table class="table detail" ng-model="companies">
+		  <tbody>
+		    <tr>
+		      <td class="leftdetail">会社名</td>
+		      <td class="rightdetail">{{ companies[whichCompany].name }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">会社名カナ</td>
+		      <td class="rightdetail">{{ companies[whichCompany].kana }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">担当者名</td>
+		      <td class="rightdetail">{{ companies[whichCompany].staff }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">担当者名カナ</td>
+		      <td class="rightdetail">{{ companies[whichCompany].staffkana }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">担当者メールアドレス</td>
+		      <td class="rightdetail">{{ companies[whichCompany].email }}</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+	<div class="addcompany" ng-show="showform">
+		<div class="form-group row">
+		  会社名
+		    <input class="form-control" type="text" placeholder="{{ companies[whichCompany].name }}" id="example-text">
+		</div>
+		<div class="form-group row">
+		  会社名カナ
+		    <input class="form-control" type="text" placeholder="{{ companies[whichCompany].kana }}" id="example-text">
+		</div>
+		<div class="form-group row">
+		  担当者名
+		    <input class="form-control" type="text" placeholder="{{ companies[whichCompany].staff }}" id="example-text">
+		</div>
+		<div class="form-group row">
+		  担当者名カナ
+		    <input class="form-control" type="text" placeholder="{{ companies[whichCompany].staffkana }}" id="example-text">
+		</div>
+		<div class="form-group row">
+		  担当者メールアドレス
+		    <input class="form-control" type="text" placeholder="{{ companies[whichCompany].email }}" id="example-text">
+		</div>
+
+	</div>
+
+</div>
