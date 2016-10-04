@@ -433,9 +433,9 @@ tr.clickable-row:hover {
 }
 
 .placeholder{
-  margin:0;
+  margin-bottom: 1em;
   height: 1px;
-  padding: 2em 2em 1em 2em;
+  padding: 1.5em 0 1em 2em;
   font-size: 20px;
   font-weight: 500;
   color: #4A4A4A;
@@ -467,7 +467,8 @@ input#example-text.form-control{
   padding-right: 3em;
 }
 
-button#save.btn.btn-success{
+button#save.btn.btn-success,
+button#save.btn.btn-primary{
   float: right;
   font-weight: 300;
 }
@@ -506,7 +507,7 @@ select.form-control, input{
 
 /*--sitedetail style--*/
 .row.detailbutton{
-  padding: 2em 3em 0 3em;
+  padding: 0 3em 0 3em;
 }
 
 button#deletesite.btn.btn-danger{
@@ -523,5 +524,20 @@ table.table.detail, td.leftdetail, td.rightdetail{
 
 td.leftdetail{
   width: 190px;
-  font-weight: 400;
+  font-weight: 500;
+  padding: 8px 0!important;
+}
+
+td.rightdetail{
+  padding: 8px 0!important;
+}
+
+input#disabledTextInput.form-control{
+  border-radius: 4px;
+}
+
+/*companydetail style*/
+.row.deletebutton{
+  padding: 1em 3em 0 3em;
+  margin-bottom: -4em;
 }
