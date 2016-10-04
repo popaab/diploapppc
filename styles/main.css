@@ -467,7 +467,6 @@ input#example-text.form-control{
   padding-right: 3em;
 }
 
-button#save.btn.btn-success,
 button#save.btn.btn-primary{
   float: right;
   font-weight: 300;
