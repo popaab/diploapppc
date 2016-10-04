@@ -433,9 +433,9 @@ tr.clickable-row:hover {
 }
 
 .placeholder{
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   height: 1px;
-  padding: 1.5em 0 1em 2em;
+  /*padding: 1.5em 0 1em 2em;*/
   font-size: 20px;
   font-weight: 500;
   color: #4A4A4A;
@@ -506,6 +506,10 @@ select.form-control, input{
 
 /*--sitedetail style--*/
 .row.detailbutton{
+  padding: 1em 3em 0 3em;
+}
+
+.row.editbutton{
   padding: 0 3em 0 3em;
 }
 

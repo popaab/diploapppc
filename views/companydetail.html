@@ -1,16 +1,23 @@
 <div id="page" ng-controller="MainCtrl">
 
-	<div class="row deletebutton" ng-hide="showform">
+	<div class="row detailbutton" ng-hide="showform">
+      <a href="#/companyoverview">
+        <button class="btn cancel" id="back">
+          <i class="glyphicon glyphicon-arrow-left">　戻る</i>
+        </button>
+      </a>
+      <button class="btn btn-primary" id="edit" ng-click="showform=true">
+        <i class="glyphicon glyphicon-pencil">　編集</i>
+      </button>
       <button class="btn btn-danger" id="deletesite">
         <i class="glyphicon glyphicon-trash">　削除</i>
       </button>
 	</div>
 
-	<div class="placeholder">
-		取引先
-	</div>
-
 	<div class="addcompany" ng-hide="showform">
+		<div class="placeholder">
+		取引先
+		</div>
 		<table class="table detail" ng-model="companies">
 		  <tbody>
 		    <tr>
@@ -38,6 +45,9 @@
 	</div>
 
 	<div class="addcompany" ng-show="showform">
+		<div class="placeholder">
+		取引先
+		</div>
 		<div class="form-group row">
 		  会社名
 		    <input class="form-control" type="text" placeholder="{{ companies[whichCompany].name }}" id="example-text">
@@ -60,18 +70,8 @@
 		</div>
 	</div>
 
-	<div class="row detailbutton" ng-hide="showform">
-      <a href="#/companyoverview">
-        <button class="btn cancel" id="back">
-          <i class="glyphicon glyphicon-arrow-left">　戻る</i>
-        </button>
-      </a>
-      <button class="btn btn-primary" id="edit" ng-click="showform=true">
-        <i class="glyphicon glyphicon-pencil">　編集</i>
-      </button>
-	</div>
 
-	<div class="row detailbutton" ng-show="showform">
+	<div class="row editbutton" ng-show="showform">
 		<button ng-click="detail=true" class="btn cancel" id="back" onClick="history.go(0)" value="Refresh">
 			<i class="glyphicon glyphicon-remove">　キャンセル</i>
 		</button>
