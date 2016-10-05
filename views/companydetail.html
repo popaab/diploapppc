@@ -1,4 +1,4 @@
-<div id="page" ng-controller="MainCtrl">
+<div id="page2" ng-controller="MainCtrl">
 
 	<div class="row detailbutton" ng-hide="showform">
       <a href="#/companyoverview">
@@ -14,7 +14,7 @@
       </button>
 	</div>
 
-	<div class="editcompany" ng-hide="showform">
+	<div class="addcompany" ng-hide="showform">
 		<div class="placeholder">
 		取引先
 		</div>
@@ -70,7 +70,7 @@
 		</div>
 	</div>
 
-	<div class="row editbutton" ng-show="showform">
+	<div class="row save" ng-show="showform">
 		<button ng-click="detail=true" class="btn cancel" id="back" onClick="history.go(0)" value="Refresh">
 			<i class="glyphicon glyphicon-remove">　キャンセル</i>
 		</button>
