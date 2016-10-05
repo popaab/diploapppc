@@ -22,6 +22,58 @@ body {
   text-align: center;
 }
 
+/*login page*/
+.login-page{
+  background: #F6F7FC;
+  width: 100%;
+  height: 100%;
+}
+
+.loginform {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  height: 310px;
+  margin: 13em auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 #ddd, 0 5px 5px 0 #ddd;
+}
+
+.loginform input {
+  outline: 0;
+  width: 100%;
+  border: 0;
+  background: #f2f2f2;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.loginform button {
+  outline: 0;
+  background: none;
+  width: 100%;
+  height: 50px;
+  border: solid 2px #4A90E2;
+  border-radius: 30px;
+  padding: 15px;
+  color: #4A4A4A;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.loginform button:hover,.loginform button:active {
+  background: #4A90E2;
+  color: white;
+}
+
+.loginform a{
+  padding-top: 10px;
+}
+
 /*--sidebar toggle---*/
 #toggle {
   display: none;
