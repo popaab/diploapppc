@@ -99,7 +99,7 @@
               <td>{{ item.status }}</td>
             </tr>
             <tr ng-repeat="item in sites | filter:{'status':'署名済み'}" class='clickable-row' data-href='#/signedsites/{{sites.indexOf(item)}}'>
-              <td style="width:42px; padding:10px 0 10px 14px;"><input type="checkbox" class="row-check"></td>
+              <td style="width:42px; padding:10px 0 10px 14px;"><input type="checkbox" class="row-check" ng-model="item.isselected"/></td>
               <td>{{ item.name }}現場</td>
               <td>{{ item.company }}</td>
               <td>{{ item.date }}</td>
