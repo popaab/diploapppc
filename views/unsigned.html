@@ -1,0 +1,130 @@
+<div id="page" ng-controller="MainCtrl">
+
+	<div class="row detailbutton" ng-hide="showform">
+      <a href="#/siteoverview">
+        <button class="btn cancel" id="back">
+          <i class="glyphicon glyphicon-arrow-left">　戻る</i>
+        </button>
+      </a>
+      <button class="btn btn-primary" id="edit" ng-click="showform=true">
+        <i class="glyphicon glyphicon-pencil">　編集</i>
+      </button>
+      <button class="btn btn-danger" id="deletesite">
+        <i class="glyphicon glyphicon-trash">　削除</i>
+      </button>
+	</div>
+
+	<div class="addcompany" ng-hide="showform">
+		<div class="placeholder">
+		現場詳細
+		</div>
+		<table class="table detail" ng-model="sites">
+		  <tbody>
+		    <tr>
+		      <td class="leftdetail">現場 ID</td>
+		      <td class="rightdetail">{{ sites[whichSite].id }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">現場名</td>
+		      <td class="rightdetail">{{ sites[whichSite].name }}現場</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">日付</td>
+		      <td class="rightdetail">{{ sites[whichSite].date }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">作業時間</td>
+		      <td class="rightdetail">{{ sites[whichSite].time }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">取引先</td>
+		      <td class="rightdetail">{{ sites[whichSite].company }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">担当者</td>
+		      <td class="rightdetail">{{ sites[whichSite].staff }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">作業内容</td>
+		      <td class="rightdetail">{{ sites[whichSite].work }}</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">人員数</td>
+		      <td class="rightdetail">{{ sites[whichSite].people }}人</td>
+		    </tr>
+		    <tr>
+		      <td class="leftdetail">状態</td>
+		      <td class="rightdetail">{{ sites[whichSite].status }}</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+
+	<div class="addcompany" ng-show="showform">
+		<div class="placeholder">
+		現場詳細
+		</div>
+		<div class="form-group row">
+		  現場 ID
+		  <fieldset disabled>
+		  	<input type="text" id="disabledTextInput" class="form-control" placeholder="{{ sites[whichSite].id }}">
+		  </fieldset>
+		</div>
+		<div class="form-group row">
+		  現場名
+		    <input class="form-control" type="text" placeholder="{{ sites[whichSite].name }}現場" id="example-text">
+		</div>
+		<div class="form-group row">
+		  日付
+		    <input class="form-control" type="date" value="{{ sites[whichSite].date }}" id="example-date">
+		</div>
+		<div class="form-group row">
+			<div class="col-sm-12">
+		    作業時間
+		    <div class="row time">
+		      <div class="col-xs-8 col-sm-5">
+		        FROM<input class="form-control" type="time" value="" id="example-time">
+		      </div>
+		      <div class="col-xs-1" style="padding-top: 30px; padding-left: 2.5em">
+		        〜
+		      </div>
+		      <div class="col-xs-8 col-sm-5">
+		        TO<input class="form-control" type="time" value="" id="example-time">
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<div class="form-group row">
+		  取引先
+		    <select class="form-control">
+            	<option>{{ sites[whichSite].company }}</option>
+          	</select>
+		</div>
+		<div class="form-group row">
+		  作業内容
+		    <input class="form-control" type="text" placeholder="{{ sites[whichSite].work }}" id="example-text">
+		</div>
+		<div class="form-group row">
+		  人員数
+		    <input class="form-control" type="text" placeholder="{{ sites[whichSite].people }}" id="example-text">
+		</div>
+		<div class="form-group row">
+		  状態
+		  <fieldset disabled>
+		  	<select class="form-control">
+            	<option>{{ sites[whichSite].status }}</option>
+          	</select>
+		  </fieldset>
+		</div>
+	</div>
+
+	<div class="row editbutton" ng-show="showform">
+		<button ng-click="detail=true" class="btn cancel" id="back" onClick="history.go(0)" value="Refresh">
+			<i class="glyphicon glyphicon-remove">　キャンセル</i>
+		</button>
+		<button ng-click="detail=true" class="btn btn-primary" id="save" onClick="history.go(0)" value="Refresh">
+			<i class="glyphicon glyphicon-floppy-disk"></i>　保存
+		</button>
+	</div>
+
+</div>

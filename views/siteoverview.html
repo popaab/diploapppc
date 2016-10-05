@@ -36,9 +36,14 @@
           </select>
         </div>
         <div class="input-group filter">
-          <p>日付範囲</p>
-          <input class="form-control filter" type="date" value="yyyy-mm-dd" id="example-date-input">
-          <input class="form-control filter" type="date" value="yyyy-mm-dd" id="example-date-input">
+            <p>日付範囲</p>
+            <div class="row time">
+              <input class="form-control filter" type="date" value="yyyy-mm-dd" id="example-date-input" style="border-radius: 4px; margin-left: 1em; margin-right: 1em">
+              <div class="col-xs-1">
+                <p style="text-align: center!important; padding-top: 10px">〜</p>
+              </div>
+              <input class="form-control filter" type="date" value="yyyy-mm-dd" id="example-date-input" style="border-radius: 4px; margin-left: 1em; margin-right: 1em">
+          </div>
         </div>
         <div class="input-group filter">
           <input type="checkbox" class="form-check-input">
@@ -85,7 +90,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="item in sites" class='clickable-row' data-href='#/sites/{{sites.indexOf(item)}}'>
+            <tr ng-repeat="item in sites | filter:{'status':'未署名'}" class='clickable-row' data-href='#/unsignedsites/{{sites.indexOf(item)}}'>
               <td style="width:42px; padding:10px 0 10px 14px;"><input type="checkbox" class="row-check" ng-model="item.isselected"/></td>
               <td>{{ item.name }}現場</td>
               <td>{{ item.company }}</td>
@@ -93,6 +98,16 @@
               <td>{{ item.id }}</td>
               <td>{{ item.status }}</td>
             </tr>
+            <tr ng-repeat="item in sites | filter:{'status':'署名済み'}" class='clickable-row' data-href='#/signedsites/{{sites.indexOf(item)}}'>
+              <td style="width:42px; padding:10px 0 10px 14px;"><input type="checkbox" class="row-check" ng-model="item.isselected"/></td>
+              <td>{{ item.name }}現場</td>
+              <td>{{ item.company }}</td>
+              <td>{{ item.date }}</td>
+              <td>{{ item.id }}</td>
+              <td>{{ item.status }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
   </div>
 </div>
