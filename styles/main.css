@@ -27,6 +27,7 @@ body {
   background: #F6F7FC;
   width: 100%;
   height: 100%;
+  z-index: 999;
 }
 
 .loginform {
@@ -187,6 +188,10 @@ ul{
 #page2 {
   position: relative;
   padding: 2em;
+}
+
+#page3 {
+  position: fixed;
 }
 
 /*#page:before {
