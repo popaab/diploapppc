@@ -399,10 +399,6 @@ button#delete.btn.btn-danger:focus{
 }
 
 /*--checkbox style--*/
-.input-group-addon .companycheck{
-  border-radius: 0;
-}
-
 span.input-group-addon{
   background: none;
   border: none;
@@ -459,6 +455,10 @@ th{
   border: solid 1px #ddd;
   color: #4A4A4A;
   font-weight: 500;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  vertical-align: middle;
 }
 
 input#check-all{
@@ -589,6 +589,18 @@ input#disabledTextInput.form-control{
 #symbol.col-xs-8.col-sm-6{
   width: 60px;
   padding: none!important;
+}
+
+.deletequestion{
+  float: right;
+  width: 60px;
+  height: 30px;
+  border: none;
+  background: none;
+}
+
+.deletequestion:focus{
+  outline: none;
 }
 
 /*companydetail style*/
