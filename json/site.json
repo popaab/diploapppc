@@ -30,7 +30,8 @@
       "work": "資材搬入業務",
       "company": "三菱産業",
       "staff": "大島様",
-      "status": "署名済み"
+      "status": "署名済み",
+      "img": "../images/oshima.svg"
    },
    {
       "id": "C12279",
@@ -41,7 +42,8 @@
       "work": "資材搬入業務",
       "company": "株式会社アーク",
       "staff": "高島様",
-      "status": "署名済み"
+      "status": "署名済み",
+      "img": "../images/takashima.svg"
    },
    {
       "id": "A47290",
@@ -52,7 +54,8 @@
       "work": "資材搬入業務",
       "company": "株式会社サカモト",
       "staff": "小林様",
-      "status": "署名済み"
+      "status": "署名済み",
+      "img": "../images/kobayashi.svg"
    },
    {
       "id": "B77610",
@@ -63,7 +66,8 @@
       "work": "資材搬入業務",
       "company": "株式会社ABC工業",
       "staff": "森田様",
-      "status": "署名済み"
+      "status": "署名済み",
+      "img": "../images/morita.svg"
    },
    {
       "id": "B37600",
@@ -74,6 +78,7 @@
       "work": "資材搬入業務",
       "company": "株式会社ナカマ",
       "staff": "粂様",
-      "status": "署名済み"
+      "status": "署名済み",
+      "img": "../images/kume.svg"
    }
 ]
