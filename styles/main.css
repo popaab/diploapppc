@@ -118,10 +118,8 @@ body {
 #sidebar {
   z-index: 10;
   width: 200px;
-  margin-bottom: -1000px;
-  padding-bottom: 1000px;
   left: -200px;
-  position: absolute;
+  position: fixed;
   background: #2C2C2C;
   -webkit-transition: left 200ms linear;
   transition: left 200ms linear;
