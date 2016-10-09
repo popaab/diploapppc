@@ -60,28 +60,128 @@
         </div>
       </div> <!-- search filter ends -->
     </div> <!-- search bar ends -->
-  </div>
+  </div><!-- id page ends -->
 
   <div id="page2">
-      <!-- add/delete button -->
-      <div class="row button">
-          <a href="#/addsite">
-            <button class="btn btn-primary" id="add">
-              <i class="glyphicon glyphicon-plus">　現場新規登録</i>
-            </button>
-          </a>
-          <button ng-disabled="countChecked() == 0" class="btn btn-danger" id="deletesite">
-            <i class="glyphicon glyphicon-trash">　削除</i>
+    <!-- add/delete button -->
+    <div class="row button">
+        <a href="#/addsite">
+          <button class="btn btn-primary" id="add">
+            <i class="glyphicon glyphicon-plus">　現場新規登録</i>
           </button>
-      </div> <!-- add/delete button ends -->
+        </a>
+        <button ng-disabled="countChecked() == 0" class="btn btn-danger" id="deletesite">
+          <i class="glyphicon glyphicon-trash">　削除</i>
+        </button>
+    </div> <!-- add/delete button ends -->
 
-      <!-- site list -->
-      <div class="site-list-group" id="sites">
-        <!-- Table -->
+    <!-- site list head -->
+    <div class="site-group-head sitelist" id="sitehead">
+      <div class="row sitelisting">
+        <div class="col-lg-1 col-md-1 col-xs-1 sitecheckbox">
+          <div class="checkbox checkbox-warning">
+            <input type="checkbox" class="styled" aria-label="Checkbox for following text input"><label for="check2"></label>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-3 headname">
+          現場名
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-xs-3 headname">
+          取引先
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-xs-2 headname">
+          日付　<i class="glyphicon glyphicon-chevron-down"></i>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-xs-2 headname">
+          現場 ID
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-xs-1 headname">
+          状態
+        </div>
+      </div>
+    </div><!-- site list head ends -->
+        
+    <!-- unsigned sites -->
+    <div href="" ng-repeat="item in sites | filter:{'status':'未署名'}" class="site-group-item site-group-item-action sitelist">
+      <div class="row sitelisting">
+        <a href="#/unsignedsites/{{sites.indexOf(item)}}" class="sitelistlink">
+          <div class="col-lg-1 col-md-1 col-xs-1 sitelistcheckbox">
+            <div class="checkbox checkbox-warning">
+              <input type="checkbox" aria-label="Checkbox for following text input" ng-model="item.ischecked" ng-click="$event.stopPropagation()"><label for="check2"></label>
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-3 col-xs-3 sitelistitem">
+              {{ item.name }}現場
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-3 sitelistitem">
+              {{ item.company }}
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2 sitelistitem">
+              {{ item.date }}
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2 sitelistitem">
+              {{ item.id }}
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-1 sitelistitem">
+              {{ item.status }}
+          </div>
+        </a>
+      </div><!-- row sitelisting ends -->
+    </div><!-- ng-repeat ends -->
+        
+    <!-- signed sites -->
+    <div href="" ng-repeat="item in sites | filter:{'status':'署名済み'}" class="site-group-item site-group-item-action sitelist">
+      <div class="row sitelisting">
+        <a href="#/signedsites/{{sites.indexOf(item)}}" class="sitelistlink">
+          <div class="col-lg-1 col-md-1 col-xs-1 sitelistcheckbox">
+            <div class="checkbox checkbox-warning">
+              <input type="checkbox" aria-label="Checkbox for following text input" ng-model="item.isdisabled" ng-click="$event.stopPropagation()"><label for="check2"></label>
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-3 col-xs-3 sitelistitem">
+              {{ item.name }}現場
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-3 sitelistitem">
+              {{ item.company }}
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2 sitelistitem">
+              {{ item.date }}
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-2 sitelistitem">
+              {{ item.id }}
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-xs-1 sitelistitem">
+              {{ item.status }}
+          </div>
+        </a>
+      </div><!-- row sitelisting ends -->
+    </div><!-- ng-repeat ends -->
+
+      <!-- <div class="site-list-group" id="sites">
+        
         <table class="table searchable table-striped table-hover">
           <thead>
             <tr>
-              <th style="width:42px; padding:10px 0 10px 14px;"><input type="checkbox" id="check-all" /></th>
+              <th style="width:42px; padding: 0 0 0 13px;">
+                <div class="checkbox checkbox-warning">
+                  <input type="checkbox" class="styled">
+                <label for="check2"></label>
+                </div>
+              </th>
               <th>現場名</th>
               <th>取引先</th>
               <th>日付　<i class="glyphicon glyphicon-chevron-down"></i></th>
@@ -91,20 +191,26 @@
           </thead>
           <tbody>
             <tr ng-repeat="item in sites | filter:{'status':'未署名'}" class='clickable-row' id='ClickableRow' data-href='#/unsignedsites/{{sites.indexOf(item)}}'>
-              <td style="width:42px; padding:10px 0 10px 14px;">
-                <input type="checkbox" class="row-check" ng-model="item.ischecked"/>
+              <td style="width:42px; padding:10px 0 10px 14px;" ng-click="$event.stopPropagation()">
+                <div class="checkbox checkbox-warning">
+                  <input id="check2" type="checkbox" class="row-check styled" ng-model="item.ischecked"/>
+                  <label for="check2"></label>
+                </div>
               </td>
-              <td>{{ item.name }}現場</td>
+              <td><a href="#/unsignedsites/{{sites.indexOf(item)}}">{{ item.name }}現場</a></td>
               <td>{{ item.company }}</td>
               <td>{{ item.date }}</td>
               <td>{{ item.id }}</td>
               <td>{{ item.status }}</td>
             </tr>
             <tr ng-repeat="item in sites | filter:{'status':'署名済み'}" class='clickable-row' id='ClickableRow' data-href='#/signedsites/{{sites.indexOf(item)}}'>
-              <td style="width:42px; padding:10px 0 10px 14px;">
-                <input type="checkbox" class="row-check" ng-model="item.isdisabled"/>
+              <td style="width:42px; padding:10px 0 10px 14px;" class="nolink" ng-click="$event.stopPropagation()">
+                <div class="checkbox checkbox-warning">
+                  <input type="checkbox" class="row-check styled" ng-model="item.isdisabled">
+                  <label for="check2"></label>
+                </div>
               </td>
-              <td>{{ item.name }}現場</td>
+              <td><a href="#/signedsites/{{sites.indexOf(item)}}">{{ item.name }}現場</a></td>
               <td>{{ item.company }}</td>
               <td>{{ item.date }}</td>
               <td>{{ item.id }}</td>
@@ -112,6 +218,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
-  </div>
-</div>
+      </div> -->
+
+    </div><!-- id page2 ends -->
+</div><!-- ng-controller ends -->

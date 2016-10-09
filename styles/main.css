@@ -23,7 +23,11 @@ body {
   text-align: center;
 }
 
-/*login page*/
+/*==========================================
+
+LOGIN.HTML
+
+===========================================*/
 .login-page{
   background: #F6F7FC;
   width: 100%;
@@ -76,7 +80,12 @@ body {
   padding-top: 10px;
 }
 
-/*--sidebar toggle---*/
+/*==========================================
+
+INDEX.HTML
+
+===========================================*/
+/*sidebar toggle*/
 #toggle {
   display: none;
 }
@@ -115,6 +124,7 @@ body {
   padding-left: 100px;
 }
 
+/*sidebar menu*/
 #sidebar {
   z-index: 10;
   width: 200px;
@@ -173,7 +183,7 @@ ul{
   padding: 0;
 }
 
-/*--content style--*/
+/*ng-view*/
 #page {
   /*z-index: 0;*/
   padding-left: 0;
@@ -198,24 +208,7 @@ ul{
   min-height: 100%;
 }
 
-/*Extra small devices (portrait phones, less than 544px)*/
-@media (max-width: 543px) {
-
-}
-
-/*Small devices (landscape phones, 544px and up)*/
-@media (min-width: 544px) and (max-width: 767px) {
-}
-
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991px) {
-
-}
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
+/*responsive*/
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
   .col-lg-6{
@@ -244,105 +237,8 @@ ul{
     }
 }
 
-/*--search style--*/
-.container{
-  width: 100%;
-}
-
-#search.container{
-  padding: 0;
-}
-
-.navbar-form{
-  padding: 0 15px;
-  margin-top: 0;
-  margin-bottom: 0;
-  border: none;
-  box-shadow: none;
-}
-
-button#search.btn{
-  background: #4A90E2;
-  width: 90px;
-  color: white;
-  border-radius: 0;
-}
-
-button#search.btn:hover{
-  background: #2370C9;
-}
-
-button#search.btn:focus{
-  outline: none;
-}
-
-button#filter.btn{
-  background: white;
-  color: #9B9B9B;
-  border-radius: 0;
-  border-top: solid 1px #ccc;
-  border-bottom: solid 1px #ccc;
-}
-
-button#filter.btn:focus{
-  outline: none;
-}
-
-.form-control{
-  box-shadow: none;
-  border-radius: 0;
-  height: 42px;
-}
-
-.btn.lg{
-  height: 42px;
-}
-
-/*--filter style--*/
-.filtermenu{
-  background: white;
-  width: 77.4%;
-  border: solid 1px #ccc;
-  border-top: none;
-  box-shadow: 1px 1px 3px #ccc;
-  position: absolute;
-  z-index: 2;
-}
-
-.input-group.filter{
-  width: 100%;
-  padding: 10px 15px;
-  color: #4A4A4A;
-  font-weight: 300;
-}
-
-.input-group.filter p{
-  color: #4A4A4A;
-}
-
-input#example-date-input.form-control{
-  width: 170px;
-  height: 38px;
-  margin-right: 3em;
-}
-
-input.form-control.filter,
-select.form-control.filter{
-  height: 38px;
-}
-
-.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle,
-.input-group .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child){
-  border-radius: 4px;
-}
-
-.input-group.filter a{
-  text-decoration: none;
-  cursor: pointer;
-  color: #4A4A4A;
-}
-
-/*--add/delete button--*/
+/*BUTTON STYLE*/
+/*add/delete button*/
 .row.button{
   padding: 0 2em 1em 2em;
 }
@@ -356,6 +252,11 @@ button#delete.btn.btn-danger:focus{
   outline: none;
 }
 
+/*==========================================
+
+COMPANYOVERVIEW.HTML
+
+===========================================*/
 /*--company list style--*/
 #company.list-group{
   padding: 0 1em;
@@ -398,81 +299,41 @@ button#delete.btn.btn-danger:focus{
   padding-left: 0;
 }
 
-/*--checkbox style--*/
-span.input-group-addon{
-  background: none;
-  border: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.title{
-  padding-left: 20px;
-  width: 100%;
-}
-
-label.title{
-  color: #50505E;
+.companyitem a{
+  color: #4A4A4A;
   text-decoration: none;
 }
 
-label.title:hover{
+.companyitem a:hover{
   color: #FF9F00;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-th.list-group-item{
+/*checkbox style*/
+.row.input-group.company{
+  width: 100%;
+}
+
+.companycheckbox{
   width: 40px;
-  background: #F7F7F8;
-  padding-left: 12px;
-  border: solid 1px #ddd;
+  margin-top: 0.5em;
 }
 
-.site-list-group{
-  height: 100%;
-  padding: 0 1em;
+/*==========================================
+
+COMPANYDETAIL.HTML
+
+===========================================*/
+.row.deletebutton{
+  padding: 1em 3em 0 3em;
+  margin-bottom: -4em;
 }
 
-table{
-  border: solid 1px #ddd;
-}
+/*==========================================
 
-tr{
-  height: 42px;
-}
+ADDCOMPANY.HTML
 
-td{
-  padding-top: 10px!important;
-  font-weight: 300;
-}
-
-thead{
-  background: #F7F7F8;
-  border: solid 1px #ddd;
-}
-
-th{
-  border: solid 1px #ddd;
-  color: #4A4A4A;
-  font-weight: 500;
-}
-
-.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-  vertical-align: middle;
-}
-
-input#check-all{
-  padding: 10px;
-}
-
-tr.clickable-row {
-   cursor: pointer;
-}
-
-tr.clickable-row:hover {
-   color: #FF9F00;
-}
-
+===========================================*/
 .placeholder{
   margin-bottom: 2em;
   height: 1px;
@@ -527,7 +388,11 @@ button#save.btn.btn-success{
   font-weight: 300;
 }
 
-/*--addsite style--*/
+/*==========================================
+
+ADDSITE.HTML
+
+===========================================*/
 input#example-date.form-control{
   border-radius: 4px;
 }
@@ -551,7 +416,11 @@ select.form-control, input{
   font-weight: 200;
 }
 
-/*--sitedetail style--*/
+/*==========================================
+
+SIGNED.HTML + UNSIGNED.HTML
+
+===========================================*/
 .row.detailbutton{
   padding: 1em;
 }
@@ -580,6 +449,7 @@ td.leftdetail{
 
 td.rightdetail{
   padding: 8px 0!important;
+  font-weight: 200;
 }
 
 input#disabledTextInput.form-control{
@@ -593,9 +463,10 @@ input#disabledTextInput.form-control{
 
 .deletequestion{
   float: right;
-  width: 60px;
+  width: 65px;
   height: 30px;
   border: none;
+  color: gray;
   background: none;
 }
 
@@ -603,8 +474,184 @@ input#disabledTextInput.form-control{
   outline: none;
 }
 
-/*companydetail style*/
-.row.deletebutton{
-  padding: 1em 3em 0 3em;
-  margin-bottom: -4em;
+/*==========================================
+
+SITEOVERVIEW.HTML
+
+===========================================*/
+/*search style*/
+.container{
+  width: 100%;
 }
+
+#search.container{
+  padding: 0;
+}
+
+/*.navbar-form{
+  padding: 0 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: none;
+  box-shadow: none;
+}*/
+
+button#search.btn{
+  background: #4A90E2;
+  width: 90px;
+  color: white;
+  border-radius: 0;
+}
+
+button#search.btn:hover{
+  background: #2370C9;
+}
+
+button#search.btn:focus{
+  outline: none;
+}
+
+button#filter.btn{
+  background: white;
+  color: #9B9B9B;
+  border-radius: 0;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+}
+
+button#filter.btn:focus{
+  outline: none;
+}
+
+.form-control{
+  box-shadow: none;
+  border-radius: 0;
+  height: 42px;
+}
+
+.btn.lg{
+  height: 42px;
+}
+
+/*filter style*/
+.filtermenu{
+  background: white;
+  width: 77.4%;
+  border: solid 1px #ccc;
+  border-top: none;
+  box-shadow: 1px 1px 3px #ccc;
+  position: absolute;
+  z-index: 2;
+}
+
+.input-group.filter{
+  width: 100%;
+  padding: 10px 15px;
+  color: #4A4A4A;
+  font-weight: 300;
+}
+
+.input-group.filter p{
+  color: #4A4A4A;
+}
+
+input#example-date-input.form-control{
+  width: 170px;
+  height: 38px;
+  margin-right: 3em;
+}
+
+input.form-control.filter,
+select.form-control.filter{
+  height: 38px;
+}
+
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle,
+.input-group .form-control:not(:first-child):not(:last-child), .input-group-addon:not(:first-child):not(:last-child), .input-group-btn:not(:first-child):not(:last-child){
+  border-radius: 4px;
+}
+
+.input-group.filter a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #4A4A4A;
+}
+
+/*site list head*/
+.site-group-head{
+  background: white;
+  font-weight: 500;
+  color: #858594;
+  padding: 0 1em;
+  border: solid 0.5px #ddd;
+  border-bottom: solid 2px #ddd;
+}
+
+#sitehead{
+  background: #F7F7F8;
+}
+
+.sitecheckbox{
+  width: 50px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin-left: 1em;
+}
+
+.headname{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-left: solid 1px #ddd;
+  font-weight: 600;
+  color: #4A4A4A;
+}
+
+/*list of sites*/
+.site-group-item{
+  background: white;
+  font-weight: 500;
+  color: #858594;
+  padding: 0 1em;
+  border-bottom: solid 0.5px #ddd;
+  border-right: solid 0.5px #ddd;
+  border-left: solid 0.5px #ddd;
+}
+
+.site-group-item.site-group-item-action.ng-scope:hover{
+  background: #F7F7F8;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sitelist{
+  padding: 0;
+  margin: 0 1em;
+  height: auto;
+}
+
+.sitelisting{
+  height: 100%;
+}
+
+.sitelistlink{
+  color: #4A4A4A;
+  font-weight: 200;
+}
+
+.sitelistlink:hover{
+  color: #FF9F00;
+}
+
+.sitelistcheckbox{
+  width: 50px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  margin-left: 1em;
+}
+
+.sitelistitem{
+  height: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+

@@ -35,16 +35,18 @@
       <li class="list-group-item" id="head">ア行</li>
       <div href="" ng-repeat="item in companies | filter:{'line':'ア'}" class="list-group-item list-group-item-action">
         <div class="col-lg-6 company">
-          <div class="input-group company">
-            <span class="input-group-addon">
-              <input type="checkbox" aria-label="Checkbox for following text input" ng-model="item.isselected">
-            </span>
-            <a href="#/company/{{companies.indexOf(item)}}">
-              <label class="title">
+          <div class="row input-group company">
+            <div class="col-lg-1 col-md-1 col-xs-1 companycheckbox">
+              <div class="checkbox checkbox-warning">
+                <input type="checkbox" aria-label="Checkbox for following text input" class="styled companycheckbox" ng-model="item.isselected"><label for="check2"></label>
+              </div>
+            </div>
+            <div class="col-lg-11 col-md-11 col-xs-8 companyitem">
+              <a href="#/company/{{companies.indexOf(item)}}">
                 <h4>{{ item.name }}</h4>
                 <p>担当者：{{ item.staff }}</p>
-              </label>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -52,14 +54,18 @@
       <li class="list-group-item" id="head">サ行</li>
       <div href="" ng-repeat="item in companies | filter:{'line':'サ'}" class="list-group-item list-group-item-action">
         <div class="col-lg-6 company">
-          <div class="input-group company">
-            <span class="input-group-addon">
-              <input type="checkbox" class="companycheck" aria-label="Checkbox for following text input" ng-model="item.isselected">
-            </span>
-            <label class="title">
-              <h4>{{ item.name }}</h4>
-              <p>担当者：{{ item.staff }}</p>
-            </label>
+          <div class="row input-group company">
+            <div class="col-lg-1 col-md-1 col-xs-1 companycheckbox">
+              <div class="checkbox checkbox-warning">
+                <input type="checkbox" aria-label="Checkbox for following text input" class="styled companycheckbox" ng-model="item.isselected"><label for="check2"></label>
+              </div>
+            </div>
+            <div class="col-lg-11 col-md-11 col-xs-8 companyitem">
+              <a href="#/company/{{companies.indexOf(item)}}">
+                <h4>{{ item.name }}</h4>
+                <p>担当者：{{ item.staff }}</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -67,14 +73,18 @@
       <li class="list-group-item" id="head">タ行</li>
       <div href="" ng-repeat="item in companies | filter:{'line':'タ'}" class="list-group-item list-group-item-action">
         <div class="col-lg-6 company">
-          <div class="input-group company">
-            <span class="input-group-addon">
-              <input type="checkbox" class="companycheck" aria-label="Checkbox for following text input" ng-model="item.isselected">
-            </span>
-            <label class="title">
-              <h4>{{ item.name }}</h4>
-              <p>担当者：{{ item.staff }}</p>
-            </label>
+          <div class="row input-group company">
+            <div class="col-lg-1 col-md-1 col-xs-1 companycheckbox">
+              <div class="checkbox checkbox-warning">
+                <input type="checkbox" aria-label="Checkbox for following text input" class="styled companycheckbox" ng-model="item.isselected"><label for="check2"></label>
+              </div>
+            </div>
+            <div class="col-lg-11 col-md-11 col-xs-8 companyitem">
+              <a href="#/company/{{companies.indexOf(item)}}">
+                <h4>{{ item.name }}</h4>
+                <p>担当者：{{ item.staff }}</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -82,14 +92,18 @@
       <li class="list-group-item" id="head">ナ行</li>
       <div href="" ng-repeat="item in companies | filter:{'line':'ナ'}" class="list-group-item list-group-item-action">
         <div class="col-lg-6 company">
-          <div class="input-group company">
-            <span class="input-group-addon">
-              <input type="checkbox" class="companycheck" aria-label="Checkbox for following text input" ng-model="item.isselected">
-            </span>
-            <label class="title">
-              <h4>{{ item.name }}</h4>
-              <p>担当者：{{ item.staff }}</p>
-            </label>
+          <div class="row input-group company">
+            <div class="col-lg-1 col-md-1 col-xs-1 companycheckbox">
+              <div class="checkbox checkbox-warning">
+                <input type="checkbox" aria-label="Checkbox for following text input" class="styled companycheckbox" ng-model="item.isselected"><label for="check2"></label>
+              </div>
+            </div>
+            <div class="col-lg-11 col-md-11 col-xs-8 companyitem">
+              <a href="#/company/{{companies.indexOf(item)}}">
+                <h4>{{ item.name }}</h4>
+                <p>担当者：{{ item.staff }}</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
