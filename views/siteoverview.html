@@ -108,13 +108,13 @@
     <!-- unsigned sites -->
     <div href="" ng-repeat="item in sites | filter:{'status':'未署名'}" class="site-group-item site-group-item-action sitelist">
       <div class="row sitelisting">
-        <a href="#/unsignedsites/{{sites.indexOf(item)}}" class="sitelistlink">
-          <div class="col-lg-1 col-md-1 col-xs-1 sitelistcheckbox">
-            <div class="checkbox checkbox-warning">
-              <input type="checkbox" aria-label="Checkbox for following text input" ng-model="item.ischecked" ng-click="$event.stopPropagation()"><label for="check2"></label>
-            </div>
+        <div class="col-lg-1 col-md-1 col-xs-1 sitelistcheckbox">
+          <div class="checkbox checkbox-warning">
+            <input type="checkbox" aria-label="Checkbox for following text input" ng-model="item.ischecked" ng-click="$event.stopPropagation()"><label for="check2"></label>
           </div>
+        </div>
         
+        <a href="#/unsignedsites/{{sites.indexOf(item)}}" class="sitelistlink">
           <div class="col-lg-3 col-md-3 col-xs-3 sitelistitem">
               {{ item.name }}現場
           </div>
@@ -146,7 +146,7 @@
             <input type="checkbox" aria-label="Checkbox for following text input" ng-model="item.isdisabled" ng-click="$event.stopPropagation()"><label for="check2"></label>
           </div>
         </div>
-        
+
         <a href="#/signedsites/{{sites.indexOf(item)}}" class="sitelistlink">
           <div class="col-lg-3 col-md-3 col-xs-3 sitelistitem">
               {{ item.name }}現場
