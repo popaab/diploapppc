@@ -1,10 +1,12 @@
 <div class="login-page" ng-hide="login" id="page3">
   <div class="loginform">
     <form class="login-form" ng-hide="forgetpw">
-      <input type="text" placeholder="ユーザー名"/>
-      <input type="password" placeholder="パスワード"/>
-      <a href="#/overview"><button class="loginbtn" ng-click="login=true">ログイン</button></a>
-      <a href=""><button class="password" ng-click="forgetpw=true">パスワードをお忘れの方</button></a>
+    	<h1 style="margin: -15px;">ログイン</h1>
+    	<br>
+		<input type="text" placeholder="ユーザー名"/>
+		<input type="password" placeholder="パスワード"/>
+		<a href="#/overview"><button class="loginbtn" ng-click="login=true">ログイン</button></a>
+		<a href=""><button class="password" ng-click="forgetpw=true">パスワードをお忘れの方</button></a>
     </form>
 
     <div ng-hide="pwrequest">
