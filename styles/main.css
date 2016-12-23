@@ -58,7 +58,7 @@ LOGIN.HTML
   font-size: 14px;
 }
 
-.loginform button {
+button.loginbtn {
   outline: 0;
   background: none;
   width: 100%;
@@ -71,7 +71,7 @@ LOGIN.HTML
   cursor: pointer;
 }
 
-.loginform button:hover,.loginform button:active {
+button.loginbtn:hover, button.loginbtn:active {
   background: #4A90E2;
   color: white;
 }
@@ -79,6 +79,20 @@ LOGIN.HTML
 .loginform a{
   padding-top: 10px;
 }
+
+button.password{
+  margin-top: 10px;
+  border: none;
+  background: none;
+}
+
+.loginform h1{
+  font-size: 20px;
+  padding: 0 0 10px 0;
+  margin: 0;
+  line-height: 24px;
+}
+
 
 /*==========================================
 
