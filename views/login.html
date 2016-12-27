@@ -12,7 +12,7 @@
     <div ng-hide="pwrequest">
 	    <form class="login-form" ng-show="forgetpw">
 	    	<h1>パスワードの再発行</h1>
-	    	<p>ご登録されたユーザー名を入力して「再発行の申請を送信」ボタンをクリックしてください。</p>
+	    	<p>ご登録されたユーザー名を入力して「再発行の申請を送信」ボタンをクリックしてください。パスワード再設定ページへのメールを送りします。</p>
 			<input type="text" placeholder="ユーザー名"/>
 			<a href=""><button class="loginbtn" ng-click="pwrequest=true">再発行の申請を送信</button></a>
 	    </form>
@@ -24,30 +24,9 @@
 	    	<br>
 	    	<h1>申請完了</h1>
 	    	<p>パスワード再発行の申請を行いました。</p>
+	    	<p>登録メールアドレスへ、パスワード再設定ページへのアクセスを含むメールを送信いたします。お受け取りになりましたメールの説明を確認の上、操作をしてください。</p>
 	    	<br>
 	    	<br>
-			<a href=""><button class="loginbtn" ng-click="requestdone=true">パスワードを再設定する</button></a>
-	    </form>
-  	</div>
-
-  	<div ng-hide="pwreset">
-	    <form class="login-form" ng-show="requestdone">
-	    	<h1 style="margin: -8px">パスワードを再設定</h1>
-	    	<p>新しいパスワードを入力してください。</p>
-			<input type="password" placeholder="新しいパスワード"/>
-			<input type="password" placeholder="新しいパスワードの確認"/>
-	      <a href=""><button class="loginbtn" ng-click="pwreset=true">パスワードを再設定</button></a>
-	    </form>
-  	</div>
-
-  	<div ng-hide="return">
-	    <form class="login-form" ng-show="pwreset">
-	    	<br>
-	    	<br>
-	    	<h1>パスワードの再登録が完了しました。</h1>
-	    	<br>
-	    	<br>
-			<a href=""><button class="loginbtn" onClick="history.go(0)" VALUE="Refresh">ログイン画面へ</button></a>
 	    </form>
   	</div>
 </div>
